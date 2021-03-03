@@ -4,7 +4,7 @@
 #  Author:       dingfang
 #  CreateDate:   2021-03-01 19:31:27
 #  ModifyAuthor: dingfang
-#  ModifyDate:   2021-03-03 08:03:22
+#  ModifyDate:   2021-03-03 21:33:49
 # =======================================================================
 
 source ./draw_conf.sh
@@ -22,6 +22,8 @@ conf=(${i_love_cpp[@]})
 factor=1
 # url
 uri="git@github.com:changdingfang"
+EMAIL="245292011@qq.com"
+USERNAME="changdingfang"
 # remote 仓库
 REPO="draw-git-2020"
 # remote 分支
@@ -53,6 +55,8 @@ function init()
     fi
     git init ${REPO}
     cd ${REPO}
+    git config --local user.email ${EMAIL}
+    git config --local user.name ${USERNAME}
     touch README.md
     git add README.md
     touch draw
